@@ -67,44 +67,10 @@
                 </div>
             </div>
         </div>
-        <div class="voteBox">
-            <div class="card">
-                <div>
-                    <div class="numbers"> 1,500</div>
-                    <div class="cardName">Total Voters</div>
-                </div>
-                <div class="iconBox">
-                    <ion-icon name="man-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <div class="numbers"> 4</div>
-                    <div class="cardName">Candidates</div>
-                </div>
-                <div class="iconBox">
-                    <ion-icon name="flag-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <div class="numbers">600 </div>
-                    <div class="cardName"> Total Vote Counted</div>
-                </div>
-                <div class="iconBox">
-                    <ion-icon name="finger-print-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <div class="numbers">40</div>
-                    <div class="cardName"></div>
-                </div>
-                <div class="iconBox">
-                    <ion-icon name="eye-outline"></ion-icon>
-                </div>
-            </div>
-        </div>
+        <div class="about">
+            <h1>hello world</h1>
+            <p>jfdisajof</p>
+</div>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script>

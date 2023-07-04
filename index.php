@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
             <div class="form-value">
                 <h1>Padmashree International College</h1>
                 <h2>Login</h2>
-                <form action="#" id="myform" method="POST">
+                <form action="" id="myform" method="post">
                     <div class="inputbox">
                         <input type="name" id="email" autocomplete="off" name="email">
                         <span id="emailError" class="error"></span>
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
                         </label>
                     </div>
 
-                    <button tpe="button" name="submit">Login</button>
+                    <button type="submit" name="submit">Login</button>
                     <div class="register">
                         <p>Don't have an account? <a href="./voter_register.php">Register now</a></p>
                     </div>

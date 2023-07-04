@@ -11,7 +11,18 @@ if (isset($_POST['submit'])) {
     $query = mysqli_query($conn, $emailqeury);
 
     $emailcount = mysqli_num_rows($query);
-
+    if(empty($name)){
+        $error['rname'] = "Username Is Required!!";
+    }
+    if(empty($email)){
+        $error['remail'] = "Email Is Required!!";
+    }
+    if(empty($gender)){
+        $error['rgender'] = "Gender Is Required!!";
+    }
+    if(empty($password)){
+      $error['rpassword'] = "Password Is Required!!";
+  }
     if($emailcount>0){
         echo "email already exits";
     }else{
@@ -54,6 +65,13 @@ if (isset($_POST['submit'])) {
                         <input type="text" id="name" name="name" value="" autocomplete="off">
                         <span id="nameError" class="error"></span>
                         <label for="name">Name</label>
+                        <p class="require">
+            <?php
+            if(isset($error['rname'])){
+                echo $error['rname'];
+            }
+            ?>
+        </p>
                     </div>
 
 
@@ -62,6 +80,13 @@ if (isset($_POST['submit'])) {
                         <input type="email" id="email" name="email" value="" autocomplete="off">
                         <span id="emailError" class="error"></span>
                         <label for="email">E-mail</label>
+                        <p class="require">
+            <?php
+            if(isset($error['remail'])){
+                echo $error['remail'];
+            }
+            ?>
+        </p>
                     </div>
 
                     <div class="inputbox">
@@ -72,20 +97,41 @@ if (isset($_POST['submit'])) {
                             <option value="female">Female</option>
                             <option value="other">Other</option>
                         </select>
+                        <p class="require">
+            <?php
+            if(isset($error['rgender'])){
+                echo $error['rgender'];
+            }
+            ?>
+        </p>
                     </div>
 
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" id="password" name="password" value="" autocomplete="off">
+                        <input type="password" id="password" name="password" value= "" autocomplete="off">
                         <span id="passwordError" class="error"></span>
                         <label for="password">Password</label>
+                        <p class="require">
+            <?php
+            if(isset($error['rpassword'])){
+                echo $error['rpassword'];
+            }
+            ?>
+        </p>
                     </div>
 
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" id="cpassword" name="c_password" value="" autocomplete="off">
+                        <input type="password" id="cpassword" name="c_password" value=""autocomplete="off">
                         <span id="cpasswordError" class="error"></span>
                         <label for="cpassword">Confirm Password</label>
+                        <p class="require">
+            <?php
+            if(isset($error['rpassword'])){
+                echo $error['rpassword'];
+            }
+            ?>
+        </p>
                     </div>
 
                     <button name="submit" type="submit">Register</button>

@@ -157,3 +157,11 @@ body{
         color: #fafafa;
         text-transform: uppercase;
     }
+    .about{
+        padding-left:50%;
+        margin-top: 40%;
+        margin-right: 60%;
+        margin-left: 40%;
+        display: flex;
+    }
+    
