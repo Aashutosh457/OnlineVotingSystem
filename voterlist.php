@@ -2,6 +2,41 @@
 
 <head>
     <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    /* margin-top: 20px; */
+    justify-content: space-between;
+    background: #c4c4c4;
+    /* min-height: 100vh; */
+    /* height: 100%; */
+}
+.navbar ul{
+    padding: 15px;
+    display: flex;
+    background: blue;
+    list-style: none;  
+    height: 25px;
+    text-align: right;
+}
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    text-decoration: none;
+    color:white;
+    width: 150px;
+    padding: 20px 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: arial;
+    text-align: center;
+}
+.navbar a:hover{
+    background: green;
+}
         table, tr, td, th{
             border: 3px solid black;
             border-collapse: collapse;
@@ -31,6 +66,17 @@
             text-transform: uppercase;
         }
     </style>
+       <div class="main">
+            <div class="navbar">
+                <ul>
+                    <li><a href="./home.php">Home</a></li>
+                    <li><a href="">Candidate</a></li>
+                    <li><a href="./voterlist.php">Voters</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About US</a></li>
+                </ul>
+            </div> 
+</div>
     <h2>padmashree international college</h2>
     <h3>Voter List</h3>
 </head>

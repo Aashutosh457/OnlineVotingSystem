@@ -163,5 +163,6 @@ body{
         margin-right: 60%;
         margin-left: 40%;
         display: flex;
+        align-items: center;
     }
     

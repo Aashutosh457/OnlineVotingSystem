@@ -56,6 +56,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <section class="container">
+ 
         <div class="form-box">
             <div class="form-value">
                 <form id="myform" action="#" method="POST">

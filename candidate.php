@@ -18,9 +18,9 @@ if(isset($_POST['btn-v'])){
         <div class="main">
             <div class="navbar">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="./home.php">Home</a></li>
                     <li><a href="">Candidate</a></li>
-                    <li><a href="">Voters</a></li>
+                    <li><a href="./voterlist.php">Voters</a></li>
                     <li><a href="">Services</a></li>
                     <li><a href="">About US</a></li>
                 </ul>
