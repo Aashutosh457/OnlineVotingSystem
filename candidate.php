@@ -7,9 +7,9 @@ if(isset($_POST['btn-v'])){
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="./profile.css">
+    <!-- <link rel="stylesheet" href="./profile.css"> -->
     <title>Document</title>
-    <link rel="stylesheet" href="./candidate.css">
+    <link rel="stylesheet" href="./candidates.css">
 
 </head>
 
@@ -19,15 +19,16 @@ if(isset($_POST['btn-v'])){
             <div class="navbar">
                 <ul>
                     <li><a href="./home.php">Home</a></li>
-                    <li><a href="">Candidate</a></li>
+                    <li><a href="./candidate.php">Candidate</a></li>
                     <li><a href="./voterlist.php">Voters</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">About US</a></li>
+                    <li><a href="./about.php">About US</a></li>
+                    <li><button onclick="func()">Logout</button></li>
                 </ul>
             </div> 
+            <div class="bck">
             <div class="heading-section">
                 <h3>Online voting System</h3>
-                <p>CANDIDATE LIST</p>
+                <p class="candi">CANDIDATE LIST</p>
             </div>
 
             <div class="rows">
@@ -75,8 +76,11 @@ if(isset($_POST['btn-v'])){
                         <button class="btn-v">vote</button>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
+        <footer class="footer">All rights reserved 2023 &copy Aashutosh</footer>   
+
 </body>
 
 </html>
