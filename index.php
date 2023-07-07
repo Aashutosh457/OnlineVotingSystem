@@ -1,26 +1,32 @@
 <?php
 require("./connect.php");
 if (isset($_POST['submit'])) {
-    echo "submitted";
 
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $error = array();
+    if($email == 0){
+        $error['email'] = "Email Required";
+    }
+    if($password == 0){
+        $error['password'] = "Password Required";
+    }
 
-    $email_search = "select * from voter where email='$email'";
-    $res = mysqli_query($conn, $email_search);
-
-    while ($row = $res->fetch_assoc()){
-        if ($email === $row["email"]){
-            if ($password == $row["password"]){
-                echo '<span style = "color: green;">login successful</span>';
-                header("Location: ./list.php");
-            }else {
-                echo '<span style = "color: red;">incorrect password</span>';
-            }
-        }else{
-            echo '<span style = "color: red;">invalid email</span>';
+    if(empty($error)){
+        $email_search = "select * from voter where email='$email'";
+        $res = mysqli_query($conn, $email_search);
+        $row = mysqli_fetch_assoc($res);
+        $id = $row['id'];
+        $prev_email = $row['email'];
+        $prev_password = $row['password'];
+        if($email==$prev_email && $password==$prev_password){
+            session_start();
+            $_SESSION['id'] = $id;
+            echo "logged in with user id '$id'";
+            header('location:home.php');
         }
     }
+        
 }
 ?>
 
