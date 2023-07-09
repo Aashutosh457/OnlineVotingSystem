@@ -1,7 +1,8 @@
-<?
-if(isset($_POST['btn-v'])){
-   
-}
+<?php
+require("./connect.php");
+$sql_query = "SELECT * FROM candidate";
+$result = $conn->query(($sql_query));
+$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,7 @@ if(isset($_POST['btn-v'])){
                     <li><a href="./candidate.php">Candidate</a></li>
                     <li><a href="./voterlist.php">Voters</a></li>
                     <li><a href="./about.php">About US</a></li>
-                    <li><button onclick="func()">Logout</button></li>
+                    <li><button class="logout" onclick="func()">Logout</button></li>
                 </ul>
             </div> 
             <div class="bck">
@@ -32,7 +33,7 @@ if(isset($_POST['btn-v'])){
             </div>
 
             <div class="rows">
-                <div class="col-1">
+                <!-- <div class="col-1">
                     <div class="img-box">
                         <img src="./images./d.jpg">
                     </div>
@@ -40,44 +41,26 @@ if(isset($_POST['btn-v'])){
                         <h2>Laxme pokheral</h2>
                         <h3>Executive director</h3>
                         <p>Vote for the changes you want in your education system</p>
-                    </div>
-                    <button class="btn-v">vote</button>
-                </div>
-                <div class="col-1">
-                    <div class="img-box">
-                        <img src="./images./b.jpg">
-                    </div>
-                    <div class="text-box">
-                        <h2>Sanjay chapagain</h2>
-                        <h3>Executive director</h3>
-                        <p>our voice matter. So, vote to make it loud and effiective</p>
-                    </div>
-                    <button class="btn-v">vote</button>
-                </div>
-                <div class="col-1">
-                    <div class="img-box">
-                        <img src="./images./a.jpg">
-                    </div>
-                    <div class="text-box">
-                        <h2>sneha bhattarai</h2>
-                        <h3>Executive director</h3>
-                        <p>Working for you, with you.Building a stronger.</p>
-                    </div>
-                    <button class="btn-v">vote</button>
-                </div>
-                <div class="col-1">
-                    <div class="img-box">
-                        <img src="./images./c.jpg">
-                    </div>
-                    <div class="text-box">
-                        <h2>Sanju chapagain</h2>
-                        <h3>Executive director</h3>
-                        <p>Let's together build skills, bright career, future opportunities for learning</p>
                         <button class="btn-v">vote</button>
                     </div>
-                </div>
-                </div>
-            </div>
+                    
+                </div> -->
+                <?php
+                
+                    echo '<div class="col-1">
+                    <div class="img-box">
+                        <img src="./images./d.jpg">
+                    </div>
+                    <div class="text-box">
+                        <h2>'.$row['name'].'</h2>
+                        <h3>'.$row['position'].'</h3>
+                        <p>Vote for the changes you want in your education system</p>
+                        <button class="btn-v">vote</button>
+                    </div>
+                    
+                </div>';
+                
+                ?>
         </div>
         <footer class="footer">All rights reserved 2023 &copy Aashutosh</footer>   
 
