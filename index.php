@@ -5,10 +5,10 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $error = array();
-    if($email == 0){
+    if($email == ''){
         $error['email'] = "Email Required";
     }
-    if($password == 0){
+    if($password == ''){
         $error['password'] = "Password Required";
     }
 
@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="login1.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
@@ -49,14 +49,30 @@ if (isset($_POST['submit'])) {
                 <form action="" id="myform" method="post">
                     <div class="inputbox">
                         <input type="name" id="email" autocomplete="off" name="email">
-                        <span id="emailError" class="error"></span>
+                        <span class="error">
+                        <?php
+                            if(isset($error['email'])){
+                                echo 
+                                "<p>".$error['email']."</p>"
+                                ;
+                            }
+                            ?>
+                        </span>
                         <label for="email">Email</label>
                     </div>
 
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                         <input type="password" id="password" autocomplete="off" name="password">
-                        <span id="passwordError" class="error"></span>
+                        <span class="error">
+                        <?php
+                            if(isset($error['password'])){
+                                echo 
+                                "<p>".$error['password']."</p>"
+                                ;
+                            }
+                            ?>
+                        </span>
                         <label for="password">Password</label>
                     </div>
 
