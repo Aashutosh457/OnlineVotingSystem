@@ -46,7 +46,7 @@ $row = mysqli_fetch_assoc($result);
                     
                 </div> -->
                 <?php
-                
+                while($row = mysqli_fetch_assoc($result)){
                     echo '<div class="col-1">
                     <div class="img-box">
                         <img src="./images./d.jpg">
@@ -59,8 +59,11 @@ $row = mysqli_fetch_assoc($result);
                     </div>
                     
                 </div>';
+                }
                 
                 ?>
+                
+                
         </div>
         <footer class="footer">All rights reserved 2023 &copy Aashutosh</footer>   
 
