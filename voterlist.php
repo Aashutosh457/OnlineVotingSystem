@@ -140,6 +140,7 @@ li{
 </head>
 <div class="contan">
     <table >
+        <thead>
         <tr>
             <td>id</td>
             <td>Name</td>
@@ -147,27 +148,28 @@ li{
             <td>Gender</td>
             <td>password</td>
         </tr>
+</thead>
+        <tbody>
         <?php
         include 'connect.php';
         $query = " select * from voter";
         $data = mysqli_query($conn, $query);
         $total = mysqli_num_rows($data);
-        if ($total != 0) {
-            $result = mysqli_fetch_assoc($data);
-            while (($result = mysqli_fetch_assoc($data))) {
+        if ($total !== 0) {
+            while ($result = mysqli_fetch_assoc($total)) {
                 echo "
         <tr>
         <td>" . $result['id'] . "</td>
         <td>" . $result['name'] . "</td>
         <td>" . $result['email'] . "</td>
         <td>" . $result['gender'] . "</td>
-        <td>" . $result['password'] . "</td>
         </tr>";
             }
         } else {
             echo "table has no records";
         }
         ?>
+        </tbody>
     </table></div>
     <footer class="footer">All rights reserved 2023 &copy Aashutosh</footer>   
 

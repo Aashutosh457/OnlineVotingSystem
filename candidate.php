@@ -1,19 +1,16 @@
 <?php
 require("./connect.php");
-$sql_query = "SELECT * FROM candidate";
-$result = $conn->query(($sql_query));
-$row = mysqli_fetch_assoc($result);
+$sql_query = "SELECT * FROM `candidate`";
+$result = $conn->query($sql_query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- <link rel="stylesheet" href="./profile.css"> -->
     <title>Document</title>
     <link rel="stylesheet" href="./candidates.css">
 
 </head>
-
 <body>
     <div class="container">
         <div class="main">
@@ -52,8 +49,8 @@ $row = mysqli_fetch_assoc($result);
                         <img src="./images./d.jpg">
                     </div>
                     <div class="text-box">
-                        <h2>'.$row['name'].'</h2>
-                        <h3>'.$row['position'].'</h3>
+                        <h2>'.$row['c_name'].'</h2>
+                        <h3>'.$row['c_position'].'</h3>
                         <p>Vote for the changes you want in your education system</p>
                         <button class="btn-v">vote</button>
                     </div>
