@@ -2,6 +2,15 @@
 include 'connect.php';
 $sql = "SELECT * FROM `boy_monitor`";
 $res = mysqli_query($conn,$sql);
+if(isset($_POST['submit'])){
+    $id = $_POST['candidate_id'];
+    $updateSql = "UPDATE `boy_monitor` SET `count` = `count` + 1 WHERE `id` = '$id'";
+    mysqli_query($conn, $updateSql);
+    header('location:b_mon.php'); // Redirect after updating the count
+    exit();
+}
+
+
 ?>
 <html lang="en">
 <head>
@@ -40,10 +49,14 @@ $res = mysqli_query($conn,$sql);
     <div class="container">
         <?php
         while($row = mysqli_fetch_assoc($res)){
-            echo "<div class='box'>
+            echo "
+            <div class='box'>
+            <form action='' method='post'>
+            <input type='hidden' name='candidate_id' value='" . $row['id'] . "'>
             <img src='images/".$row['image']."'>
             <h1>".$row['name']."</h1>
-            <button type='submit'>Vote</button>
+            <button name='submit' type='submit'>Vote</button>
+            </form>
             </div>";
         }
         

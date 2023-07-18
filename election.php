@@ -38,19 +38,19 @@
     <div class="container">
         <div class="boy-monitor">
             <h1>For Gents Monitor</h1>
-            <a href="b-mon.php">Click Here</a>
+            <a href="b_mon.php">Click Here</a>
         </div>
         <div class="boy-cr">
             <h1>For gents Representatives</h1>
-            <a href="b-cr.php">Click Here</a>
+            <a href="b_cr.php">Click Here</a>
         </div>
         <div class="girl-monitor">
         <h1>For ladies Monitor</h1>
-        <a href="g-mon.php">Click Here</a>
+        <a href="girl_mon.php">Click Here</a>
         </div>
         <div class="girl-cr">
         <h1>For ladies Representatives</h1>
-        <a href="g-cr.php">Click Here</a>
+        <a href="girl_cr.php">Click Here</a>
         </div>
     </div>
 </body>
